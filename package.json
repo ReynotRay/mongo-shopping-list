@@ -1,0 +1,16 @@
+{
+  "name": "mongo-shopping-list",
+  "version": "0.0.0",
+  "description": "Shopping list app demo built for Thinkful course",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongo",
+    "todo",
+    "shopping"
+  ],
+  "author": "Justin M. Hill",
+  "license": "ISC"
+}
