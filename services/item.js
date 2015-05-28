@@ -1,7 +1,7 @@
 var Item = require('../models/item');
 
 exports.save = function (name, callback, errback) {
-  Item.create({ name: name }, function (err, item) {
+  Item.create({ name: name }, function(err, item) {
     if (err) {
       errback(err);
       return;
@@ -20,3 +20,12 @@ exports.list = function (callback, errback) {
   });
 };
 
+exports.remove = function (id, callback, errback) {
+  Item.remove({ id: id }, function(err, item) {
+    if (err) {
+      errback(err);
+      return;
+    }
+    callback(item);
+  })
+}
