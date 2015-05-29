@@ -27,5 +27,15 @@ exports.remove = function (id, callback, errback) {
       return;
     }
     callback(item);
-  })
-}
+  });
+};
+
+exports.update = function (id, newName, callback, errback) {
+  Item.findOneAndUpdate({ id: id }, { name: newName }, function(err, item) {
+    if (err) {
+      errback(err);
+      return;
+    }
+    callback(item);
+  });
+};
