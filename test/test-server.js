@@ -57,7 +57,7 @@ describe('Shopping List', function() {
     });
     it('should edit an item on put', function(done) {
         chai.request(app)
-            .put('/items/:id')
+            .put('/items/0')
             .send( { name: 'Apples', id: 0 } )
             .end(function(err, res) {
                 res.should.have.status(200);
