@@ -20,6 +20,7 @@ router.post('/items', function(req, res) {
 
 router.delete('/items/:id', function(req, res) {
   Item.remove(req.params.id, function(item) {
+    console.log(item);
     res.status(200).json(item);
   }, function(err) {
     res.status(400).json(err);
@@ -28,6 +29,7 @@ router.delete('/items/:id', function(req, res) {
 
 router.put('/items/:id', function(req, res) {
   Item.update(req.params.id, req.body.name, function(item) {
+    console.log(item);
     res.status(200).json(item);
   }, function(err) {
     res.status(400).json(err);
